@@ -1,0 +1,556 @@
+{
+ "source_files": [
+  "h2_audit.json",
+  "cys_audit.json",
+  "cys_followup.json",
+  "scaling.json"
+ ],
+ "software": {
+  "h2": {
+   "python": "3.13.16",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "pyscf": "2.14.0",
+   "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "cysteine": {
+   "python": "3.13.16",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "pyscf": "2.14.0",
+   "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+   "geomeTRIC": "0+untagged.1.ge31d644"
+  }
+ },
+ "H2_R0.7414": {
+  "E_nuc": 0.7137539936876182,
+  "E_RHF": -1.1166843870853405,
+  "E_FCI_pyscf": -1.137270174660903,
+  "E_JW_exact_N2_Sz0": -1.1372701746609022,
+  "E_CI2x2_analytic": -1.1372701746609026,
+  "n_qubits": 4,
+  "n_pauli_terms_incl_identity": 15,
+  "pauli_1norm_excl_identity": 1.8850504928513097,
+  "lowest_eigenvalue_by_particle_number": {
+   "0": 0.713753993687618,
+   "1": -0.5387095798772799,
+   "2": -1.1372701746609022,
+   "3": -0.44698571767066486,
+   "4": 0.9201067191670371
+  }
+ },
+ "H2_R0.735": {
+  "E_nuc": 0.7199689944489797,
+  "E_RHF": -1.116998996754004,
+  "E_FCI_pyscf": -1.1373060357534004
+ },
+ "H2_checks": {
+  "points": 218,
+  "worst_case": {
+   "rhf_rebuilt_minus_pyscf": 8.881784197001252e-16,
+   "eri_own_vs_ao2mo_maxabs": 9.325873406851315e-15,
+   "h1_symmetric_maxabs": 4.703395241529109e-16,
+   "eri_8fold_maxabs": 4.083007587685794e-15,
+   "pauli_coeff_max_imag": 0.0,
+   "dense_pauli_vs_direct_maxabs": 8.095569808355087e-15,
+   "hermiticity_maxabs": 0.0,
+   "commutator_H_N_maxabs": 0.0,
+   "commutator_H_Sz_maxabs": 0.0,
+   "fci_vs_jw": 1.7763568394002505e-15,
+   "fci_vs_ci2": 1.7763568394002505e-15
+  },
+  "all_routes_agree": true,
+  "variational_bound_ok": true,
+  "global_min_always_N2": true,
+  "R_min_RHF_A": 0.712,
+  "R_min_FCI_A": 0.735,
+  "E_two_H_atoms": -0.9331636991145507,
+  "E_FCI_3.0A": -0.9336318445584986,
+  "E_RHF_3.0A": -0.6560482511455911,
+  "wall_time_s": 6.17
+ },
+ "cysteine_counts": {
+  "formula_atoms": {
+   "N": 1,
+   "H": 7,
+   "C": 3,
+   "S": 1,
+   "O": 2
+  },
+  "electrons": 64,
+  "spatial_basis_functions": 46,
+  "spin_orbitals": 92,
+  "basis_functions_per_atom": {
+   "N": 5,
+   "H": 1,
+   "C": 5,
+   "S": 9,
+   "O": 5
+  },
+  "occupied_spatial": 32,
+  "virtual_spatial": 14,
+  "core_spatial_orbitals(frozen-core convention)": 11,
+  "jw_qubits_full_space": 92,
+  "fci_determinants_full": "57541236117870711440025",
+  "fci_determinants_full_log10": 22.76,
+  "fci_determinants_frozen_core": "5382211617648360000",
+  "fci_determinants_frozen_core_log10": 18.73
+ },
+ "cysteine_conformers": [
+  {
+   "seed": [
+    -60,
+    180,
+    160
+   ],
+   "E_start": -710.8586366763798,
+   "E_opt": -710.8689080847086,
+   "opt_converged": true,
+   "max_grad": 3.1432334839376352e-06,
+   "opt_time_s": 65.7,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  },
+  {
+   "seed": [
+    60,
+    180,
+    160
+   ],
+   "E_start": -710.8579499547212,
+   "E_opt": -710.8669972590276,
+   "opt_converged": true,
+   "max_grad": 1.3485372371224713e-05,
+   "opt_time_s": 69.1,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  },
+  {
+   "seed": [
+    180,
+    180,
+    160
+   ],
+   "E_start": -710.8575983490418,
+   "E_opt": -710.8682874780878,
+   "opt_converged": true,
+   "max_grad": 3.5833064782053725e-06,
+   "opt_time_s": 68.1,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  },
+  {
+   "seed": [
+    -60,
+    60,
+    -20
+   ],
+   "E_start": -710.8585003347571,
+   "E_opt": -710.8684160629275,
+   "opt_converged": true,
+   "max_grad": 1.235191462223284e-06,
+   "opt_time_s": 76.3,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  },
+  {
+   "seed": [
+    60,
+    -60,
+    -20
+   ],
+   "E_start": -710.857978488627,
+   "E_opt": -710.8679093186265,
+   "opt_converged": true,
+   "max_grad": 1.3606580633318544e-05,
+   "opt_time_s": 46.2,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  },
+  {
+   "seed": [
+    180,
+    60,
+    -20
+   ],
+   "E_start": -710.859765739651,
+   "E_opt": -710.8691575333199,
+   "opt_converged": true,
+   "max_grad": 5.091931750245138e-06,
+   "opt_time_s": 76.1,
+   "bonds": 13,
+   "stability": {
+    "internal_stable": true,
+    "external_stable(RHF->UHF)": false
+   }
+  }
+ ],
+ "cysteine_energy": {
+  "E_range_optimized": [
+   -710.8691575333199,
+   -710.8669972590276
+  ],
+  "spread_optimized_mEh": 2.1602742923505502,
+  "E_range_idealized_starts": [
+   -710.859765739651,
+   -710.8575983490418
+  ],
+  "E_lowest": -710.8691575333199,
+  "historical_minus_lowest": {
+   "Eh": 1.7571835333199033,
+   "kcal_mol": 1102.6493147150338,
+   "eV": 47.81539939801175
+  }
+ },
+ "cysteine_orbitals_range": {
+  "E_HOMO_Eh": [
+   -0.27573323394181504,
+   -0.27034117490340415
+  ],
+  "E_LUMO_Eh": [
+   0.2977462702378806,
+   0.3020363994921249
+  ],
+  "gap_eV": [
+   15.53832404901533,
+   15.676996503057268
+  ],
+  "koopmans_IP_eV": [
+   7.3563580619900435,
+   7.503083461819031
+  ],
+  "HOMO_mulliken_weight_on_S": [
+   0.865,
+   0.945
+  ]
+ },
+ "cysteine_frequencies_lowest": {
+  "n_imaginary": 0,
+  "lowest_cm-1": [
+   "36.1",
+   "78.8",
+   "168.7",
+   "223.1"
+  ],
+  "time_s": 32.2
+ },
+ "error_hypotheses_dE_vs_lowest": {
+  "angstrom_numbers_read_as_bohr(x0.529)": 17.149987972516215,
+  "bohr_numbers_read_as_angstrom(x1.890)": 3.0203339590135556,
+  "random_cartesian_noise_5_seeds": {
+   "sigma_0.02A": {
+    "min": 0.007951033322115109,
+    "mean": 0.01059513392158351,
+    "max": 0.013048571636431916
+   },
+   "sigma_0.05A": {
+    "min": 0.05267968439522974,
+    "mean": 0.06918521542343115,
+    "max": 0.1033984320052923
+   },
+   "sigma_0.10A": {
+    "min": 0.21872140353571012,
+    "mean": 0.4389524136939144,
+    "max": 0.7409355302783069
+   },
+   "sigma_0.15A": {
+    "min": 0.3629493134161521,
+    "mean": 0.6193606600943212,
+    "max": 1.0465673860645666
+   },
+   "sigma_0.20A": {
+    "min": 0.5713601357136895,
+    "mean": 1.0086893669315031,
+    "max": 1.9945555152768293
+   },
+   "sigma_0.30A": {
+    "min": 1.3837197373999288,
+    "mean": 3.805137168139413,
+    "max": 10.772388925099108
+   }
+  },
+  "zwitterion_single_point(H moved O->N)": 0.3640968341767348,
+  "one_H_misplaced(S-H=0.60A)": 1.4592633471514773,
+  "sto-6g_same_geometry": -6.067697436349135,
+  "ROHF_triplet_same_geometry": 0.11677824095249889
+ },
+ "MP2_correlation": {
+  "frozen_core": -0.33031629337736806,
+  "all_electron": -0.3327303401419347,
+  "time_s": 0.0
+ },
+ "active_spaces": [
+  {
+   "CAS(e,o)": [
+    2,
+    2
+   ],
+   "qubits": 4,
+   "determinants": 4,
+   "E_CASCI": -710.8691580631388,
+   "E_corr_captured": -5.298188625602052e-07,
+   "casci_time_s": 0.01,
+   "one_norm_koridon": 1.164125239582119,
+   "jw_pauli_terms_incl_identity": 27,
+   "jw_one_norm_explicit": 1.1641252395821189,
+   "jw_build_time_s": 0.0,
+   "jw_ground_minus_casci": -3.410605131648481e-13
+  },
+  {
+   "CAS(e,o)": [
+    4,
+    4
+   ],
+   "qubits": 8,
+   "determinants": 36,
+   "E_CASCI": -710.8697914853698,
+   "E_corr_captured": -0.0006339520498386264,
+   "casci_time_s": 0.01,
+   "one_norm_koridon": 3.4264270187393815,
+   "jw_pauli_terms_incl_identity": 361,
+   "jw_one_norm_explicit": 3.4264270187393775,
+   "jw_build_time_s": 0.03,
+   "jw_ground_minus_casci": -1.9326762412674725e-12
+  },
+  {
+   "CAS(e,o)": [
+    6,
+    6
+   ],
+   "qubits": 12,
+   "determinants": 400,
+   "E_CASCI": -710.871217193781,
+   "E_corr_captured": -0.0020596604611000657,
+   "casci_time_s": 0.07,
+   "one_norm_koridon": 9.171517999104609,
+   "jw_pauli_terms_incl_identity": 1819,
+   "jw_one_norm_explicit": 9.171517999104609,
+   "jw_build_time_s": 0.24
+  },
+  {
+   "CAS(e,o)": [
+    8,
+    8
+   ],
+   "qubits": 16,
+   "determinants": 4900,
+   "E_CASCI": -710.8918787195832,
+   "E_corr_captured": -0.02272118626331121,
+   "casci_time_s": 0.08,
+   "one_norm_koridon": 18.25268072036704,
+   "jw_pauli_terms_incl_identity": 5793,
+   "jw_one_norm_explicit": 18.252680720366964,
+   "jw_build_time_s": 0.76
+  },
+  {
+   "CAS(e,o)": [
+    10,
+    10
+   ],
+   "qubits": 20,
+   "determinants": 63504,
+   "E_CASCI": -710.8998094074902,
+   "E_corr_captured": -0.030651874170303017,
+   "casci_time_s": 1.2,
+   "one_norm_koridon": 34.11856960469702,
+   "jw_pauli_terms_incl_identity": 14251,
+   "jw_one_norm_explicit": 34.11856960469712,
+   "jw_build_time_s": 2.3
+  },
+  {
+   "CAS(e,o)": [
+    12,
+    12
+   ],
+   "qubits": 24,
+   "determinants": 853776,
+   "E_CASCI": -710.9033087270954,
+   "E_corr_captured": -0.03415119377541487,
+   "casci_time_s": 20.06,
+   "one_norm_koridon": 53.876866352266546
+  }
+ ],
+ "full_space_one_norm": 2779.4883638977904,
+ "external_instability": {
+  "E_RHF": -710.8691575333329,
+  "E_UHF_broken_symmetry": -710.8702936584772,
+  "E_UHF_minus_RHF_Eh": -0.0011361251442849607,
+  "E_UHF_minus_RHF_mEh": -1.1361251442849607,
+  "UHF_<S^2>": 0.1572719482844498,
+  "UHF_converged": true,
+  "pyscf_log": [
+   "rhf_real2complex: lowest eigs of H = [0.1744156  0.31192547 0.31613362]",
+   "rhf_external: lowest eigs of H = [-0.02759826  0.13517206  0.24425311]",
+   "<class 'pyscf.scf.hf.RHF'> wavefunction has an RHF/RKS -> UHF/UKS instability"
+  ]
+ },
+ "pauli_terms": {
+  "by_norb": {
+   "2": 27,
+   "3": 118,
+   "4": 361,
+   "5": 876,
+   "6": 1819,
+   "7": 3382,
+   "8": 5793,
+   "9": 9316,
+   "10": 14251,
+   "11": 20934,
+   "12": 29737
+  },
+  "fit": {
+   "coefficients_high_to_low": [
+    1.5000000000000113,
+    -1.000000000000312,
+    2.500000000003168,
+    -1.2702490539123995e-11,
+    1.000000000018952
+   ],
+   "heldout_errors": {
+    "10": 7.275957614183426e-12,
+    "11": 7.275957614183426e-12,
+    "12": 1.0913936421275139e-11
+   },
+   "max_abs_error_all": 1.0913936421275139e-11
+  },
+  "extrapolated": {
+   "norb46_qubits92": 6624139.000000028,
+   "norb35_qubits70_frozen_core": 2211126.000000007
+  }
+ },
+ "scaling": [
+  {
+   "system": "H2",
+   "atoms": 2,
+   "electrons": 2,
+   "frozen_core_orbitals": 0,
+   "sto-3g_spatial_orbitals": 2,
+   "sto-3g_jw_qubits": 4,
+   "sto-3g_eri_storage_8fold_GB": 0.0,
+   "6-31g*_spatial_orbitals": 4,
+   "6-31g*_jw_qubits": 8,
+   "6-31g*_eri_storage_8fold_GB": 0.0,
+   "cc-pvdz_spatial_orbitals": 10,
+   "cc-pvdz_jw_qubits": 20,
+   "cc-pvdz_eri_storage_8fold_GB": 1e-05,
+   "sto-3g_fci_log10_determinants": 0.6
+  },
+  {
+   "system": "LiH",
+   "atoms": 2,
+   "electrons": 4,
+   "frozen_core_orbitals": 1,
+   "sto-3g_spatial_orbitals": 6,
+   "sto-3g_jw_qubits": 12,
+   "sto-3g_eri_storage_8fold_GB": 1e-06,
+   "6-31g*_spatial_orbitals": 16,
+   "6-31g*_jw_qubits": 32,
+   "6-31g*_eri_storage_8fold_GB": 6.6e-05,
+   "cc-pvdz_spatial_orbitals": 19,
+   "cc-pvdz_jw_qubits": 38,
+   "cc-pvdz_eri_storage_8fold_GB": 0.00013,
+   "sto-3g_fci_log10_determinants": 2.4
+  },
+  {
+   "system": "H2O",
+   "atoms": 3,
+   "electrons": 10,
+   "frozen_core_orbitals": 1,
+   "sto-3g_spatial_orbitals": 7,
+   "sto-3g_jw_qubits": 14,
+   "sto-3g_eri_storage_8fold_GB": 2e-06,
+   "6-31g*_spatial_orbitals": 18,
+   "6-31g*_jw_qubits": 36,
+   "6-31g*_eri_storage_8fold_GB": 0.000105,
+   "cc-pvdz_spatial_orbitals": 24,
+   "cc-pvdz_jw_qubits": 48,
+   "cc-pvdz_eri_storage_8fold_GB": 0.000332,
+   "sto-3g_fci_log10_determinants": 2.6
+  },
+  {
+   "system": "cysteine C3H7NO2S",
+   "atoms": 14,
+   "electrons": 64,
+   "frozen_core_orbitals": 11,
+   "sto-3g_spatial_orbitals": 46,
+   "sto-3g_jw_qubits": 92,
+   "sto-3g_eri_storage_8fold_GB": 0.004477,
+   "6-31g*_spatial_orbitals": 116,
+   "6-31g*_jw_qubits": 232,
+   "6-31g*_eri_storage_8fold_GB": 0.181064,
+   "cc-pvdz_spatial_orbitals": 137,
+   "cc-pvdz_jw_qubits": 274,
+   "cc-pvdz_eri_storage_8fold_GB": 0.352275,
+   "sto-3g_fci_log10_determinants": 22.8
+  },
+  {
+   "system": "cystine C6H12N2O4S2 (disulfide)",
+   "atoms": 26,
+   "electrons": 126,
+   "frozen_core_orbitals": 22,
+   "sto-3g_spatial_orbitals": 90,
+   "sto-3g_jw_qubits": 180,
+   "sto-3g_eri_storage_8fold_GB": 0.06561,
+   "6-31g*_spatial_orbitals": 228,
+   "6-31g*_jw_qubits": 456,
+   "6-31g*_eri_storage_8fold_GB": 2.702336,
+   "cc-pvdz_spatial_orbitals": 264,
+   "cc-pvdz_jw_qubits": 528,
+   "cc-pvdz_eri_storage_8fold_GB": 4.857532,
+   "sto-3g_fci_log10_determinants": 45.7
+  },
+  {
+   "system": "human insulin C257H383N65O77S6",
+   "atoms": 788,
+   "electrons": 3092,
+   "frozen_core_orbitals": 429,
+   "sto-3g_spatial_orbitals": 2432,
+   "sto-3g_jw_qubits": 4864,
+   "sto-3g_eri_storage_8fold_GB": 34982.777061,
+   "6-31g*_spatial_orbitals": 6460,
+   "6-31g*_jw_qubits": 12920,
+   "6-31g*_eri_storage_8fold_GB": 1741526.43856,
+   "cc-pvdz_spatial_orbitals": 7609,
+   "cc-pvdz_jw_qubits": 15218,
+   "cc-pvdz_eri_storage_8fold_GB": 3352048.829528,
+   "sto-3g_fci_log10_determinants": 1381.9
+  }
+ ],
+ "derived": {
+  "shots_one_norm_bound_(lambda/eps)^2_eps=1.6mEh": {
+   "H2_R0.7414": 1388052.8752339706,
+   "cysteine_CAS(12,12)": 1133873721.8515587,
+   "cysteine_full_46_orbitals": 3017795142595.0063
+  },
+  "statevector_complex128_GiB": {
+   "20": 0.015625,
+   "24": 0.25,
+   "26": 1.0,
+   "28": 4.0,
+   "30": 16.0,
+   "32": 64.0
+  },
+  "density_matrix_complex128_GiB": {
+   "10": 0.015625,
+   "12": 0.25,
+   "13": 1.0,
+   "14": 4.0
+  },
+  "CAS12_corr_fraction_of_frozen_core_MP2": 0.10338937091546684
+ }
+}

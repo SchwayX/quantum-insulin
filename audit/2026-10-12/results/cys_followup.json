@@ -1,0 +1,48 @@
+{
+ "geometry_file": "cysteine_rhf_sto3g_lowest.xyz",
+ "external_stability": {
+  "E_RHF": -710.8691575333329,
+  "E_UHF_broken_symmetry": -710.8702936584772,
+  "E_UHF_minus_RHF_Eh": -0.0011361251442849607,
+  "E_UHF_minus_RHF_mEh": -1.1361251442849607,
+  "UHF_<S^2>": 0.1572719482844498,
+  "UHF_converged": true,
+  "pyscf_log": [
+   "rhf_real2complex: lowest eigs of H = [0.1744156  0.31192547 0.31613362]",
+   "rhf_external: lowest eigs of H = [-0.02759826  0.13517206  0.24425311]",
+   "<class 'pyscf.scf.hf.RHF'> wavefunction has an RHF/RKS -> UHF/UKS instability"
+  ]
+ },
+ "pauli_terms_by_norb": {
+  "2": 27,
+  "3": 118,
+  "4": 361,
+  "5": 876,
+  "6": 1819,
+  "7": 3382,
+  "8": 5793,
+  "9": 9316,
+  "10": 14251,
+  "11": 20934,
+  "12": 29737
+ },
+ "poly4_fit_on_norb_2_to_9": {
+  "coefficients_high_to_low": [
+   1.5000000000000113,
+   -1.000000000000312,
+   2.500000000003168,
+   -1.2702490539123995e-11,
+   1.000000000018952
+  ],
+  "heldout_errors": {
+   "10": 7.275957614183426e-12,
+   "11": 7.275957614183426e-12,
+   "12": 1.0913936421275139e-11
+  },
+  "max_abs_error_all": 1.0913936421275139e-11
+ },
+ "extrapolated_pauli_terms": {
+  "norb46_qubits92": 6624139.000000028,
+  "norb35_qubits70_frozen_core": 2211126.000000007
+ }
+}

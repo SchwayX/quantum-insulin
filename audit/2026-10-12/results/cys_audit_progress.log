@@ -1,0 +1,17 @@
+[    0.5s] counts: 64 e, 46 AO, 92 spin orbitals
+[   71.0s] seed (-60, 180, 160): start -710.85863668  opt -710.8689080847  conv=True  bonds=13  66s
+[  144.2s] seed (60, 180, 160): start -710.85794995  opt -710.8669972590  conv=True  bonds=13  69s
+[  216.5s] seed (180, 180, 160): start -710.85759835  opt -710.8682874781  conv=True  bonds=13  68s
+[  296.7s] seed (-60, 60, -20): start -710.85850033  opt -710.8684160629  conv=True  bonds=13  76s
+[  347.1s] seed (60, -60, -20): start -710.85797849  opt -710.8679093186  conv=True  bonds=13  46s
+[  427.2s] seed (180, 60, -20): start -710.85976574  opt -710.8691575333  conv=True  bonds=13  76s
+[  459.4s] frequencies: n_imag=0 lowest [ 36.05451135  78.82693038 168.71812244]
+[  478.6s] hypotheses done
+[  478.7s] MP2 corr fc=-0.330316 ae=-0.332730
+[  478.7s] CAS(2,2): E=-710.86915806 corr=-0.000001 terms=27 lam_explicit=1.1641252395821189 lam_formula=1.164125
+[  479.2s] CAS(4,4): E=-710.86979149 corr=-0.000634 terms=361 lam_explicit=3.4264270187393775 lam_formula=3.426427
+[  479.6s] CAS(6,6): E=-710.87121719 corr=-0.002060 terms=1819 lam_explicit=9.171517999104609 lam_formula=9.171518
+[  480.4s] CAS(8,8): E=-710.89187872 corr=-0.022721 terms=5793 lam_explicit=18.252680720366964 lam_formula=18.252681
+[  484.0s] CAS(10,10): E=-710.89980941 corr=-0.030652 terms=14251 lam_explicit=34.11856960469712 lam_formula=34.118570
+[  504.0s] CAS(12,12): E=-710.90330873 corr=-0.034151 terms=None lam_explicit=None lam_formula=53.876866
+[  504.2s] done -> /home/claude/quantum-insulin/audit/2026-10-12/results/cys_audit.json
